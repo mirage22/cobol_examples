@@ -1,6 +1,10 @@
 # Cobol copybook example usage
 
-This is the simple COBOL program using copybooks
+This is the simple COBOL program using copybooks and variables
+* variables definition
+* definition by copybooks
+* redefining variables
+* renaming variables
 
 ## How to compile and execute
 

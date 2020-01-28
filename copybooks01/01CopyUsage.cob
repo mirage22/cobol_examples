@@ -24,7 +24,11 @@
        01 WS-SAMPLE.
            05  WS-SAMPLE-NUM1          PIC X(5).
            05  WS-SAMPLE-NUM2 REDEFINES WS-SAMPLE-NUM1 
-                                       PIC 9(3)v9(2).           
+                                       PIC 9(3)v9(2).
+           05  WS-NUMBER.
+               10 WS-NUMBER-1          PIC 9(5)    VALUE 12345.
+           05  WS-CARACTERS            PIC X(5)    VALUE 'ABCDE'.
+           66  WS-RENAME  RENAMES WS-NUMBER-1 THRU WS-CARACTERS.           
 
        procedure division.
        main section.
@@ -39,5 +43,6 @@
            display 'DATE1: ' WS-DATE1.
            display 'DATE2: ' WS-DATE2.
            display 'SAMPLE NUMBER:' WS-SAMPLE-NUM1.
+           display 'WS-RENAME:' WS-RENAME;
            stop run
            .
